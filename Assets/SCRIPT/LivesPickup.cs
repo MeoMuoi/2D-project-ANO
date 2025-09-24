@@ -1,15 +1,15 @@
 using UnityEngine;
 
-public class HealthPickup : MonoBehaviour
+public class LivesPickup : MonoBehaviour
 {
-    [SerializeField] private int healAmount = 1;
+    [SerializeField] private int lifeAmount = 1; // số mạng hồi thêm
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         HeroKnight player = collision.GetComponent<HeroKnight>();
         if (player != null)
         {
-            GameManager.Instance.Heal(healAmount);
+            GameManager.Instance.AddLife(lifeAmount);
             Destroy(gameObject);
         }
     }

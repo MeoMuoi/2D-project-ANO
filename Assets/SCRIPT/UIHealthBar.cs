@@ -3,13 +3,10 @@ using UnityEngine.UI;
 
 public class UIHealthBar : MonoBehaviour
 {
-    [SerializeField] private Image healthBarImage;
-    [SerializeField] private Sprite[] healthSprites;
+    [SerializeField] private Slider slider;
 
-    public void SetHealth(int currentHealth)
+    public void SetHealth(int health)
     {
-        // clamp index
-        int index = Mathf.Clamp(currentHealth, 0, healthSprites.Length - 1);
-        healthBarImage.sprite = healthSprites[index];
+        if (slider != null) slider.value = health;
     }
 }
