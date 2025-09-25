@@ -1722,6 +1722,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   maxHealth: 5
   maxLives: 3
+  respawnPoint: {fileID: 677304420}
 --- !u!1 &1059901812
 GameObject:
   m_ObjectHideFlags: 0
@@ -2443,12 +2444,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UIHealthBar
   healthImage: {fileID: 1595703759}
   healthSprites:
-  - {fileID: -6897644465548184017, guid: 3aec974f7f31d6648958464e5e4c5d9f, type: 3}
-  - {fileID: 1560928880417417625, guid: 3aec974f7f31d6648958464e5e4c5d9f, type: 3}
-  - {fileID: 3956701864041069324, guid: 3aec974f7f31d6648958464e5e4c5d9f, type: 3}
-  - {fileID: -8945009355124215587, guid: 3aec974f7f31d6648958464e5e4c5d9f, type: 3}
-  - {fileID: -1680754414763268110, guid: 3aec974f7f31d6648958464e5e4c5d9f, type: 3}
   - {fileID: 8931267622640425446, guid: 3aec974f7f31d6648958464e5e4c5d9f, type: 3}
+  - {fileID: -1680754414763268110, guid: 3aec974f7f31d6648958464e5e4c5d9f, type: 3}
+  - {fileID: -8945009355124215587, guid: 3aec974f7f31d6648958464e5e4c5d9f, type: 3}
+  - {fileID: 3956701864041069324, guid: 3aec974f7f31d6648958464e5e4c5d9f, type: 3}
+  - {fileID: 1560928880417417625, guid: 3aec974f7f31d6648958464e5e4c5d9f, type: 3}
+  - {fileID: -6897644465548184017, guid: 3aec974f7f31d6648958464e5e4c5d9f, type: 3}
 --- !u!1 &1659721196
 GameObject:
   m_ObjectHideFlags: 0
@@ -2802,7 +2803,7 @@ GameObject:
   - component: {fileID: 1921921072}
   - component: {fileID: 1921921075}
   - component: {fileID: 1921921074}
-  - component: {fileID: 1921921076}
+  - component: {fileID: 1921921073}
   m_Layer: 5
   m_Name: Lives
   m_TagString: Untagged
@@ -2829,6 +2830,19 @@ RectTransform:
   m_AnchoredPosition: {x: -6.6679993, y: 2.661728}
   m_SizeDelta: {x: 40.28, y: 36.72}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1921921073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1921921071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff92c837bae983e4f918a523069f10cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UILivesBar
+  livesText: {fileID: 0}
 --- !u!114 &1921921074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2867,24 +2881,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1921921071}
   m_CullTransparentMesh: 1
---- !u!114 &1921921076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1921921071}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff92c837bae983e4f918a523069f10cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UILives
-  livesImage: {fileID: 1921921074}
-  livesSprites:
-  - {fileID: 3809099528977689272, guid: 81c62f122f0182044af71cb062a2c2ff, type: 3}
-  - {fileID: -6735226438528649199, guid: 81c62f122f0182044af71cb062a2c2ff, type: 3}
-  - {fileID: 8049217189306615413, guid: 81c62f122f0182044af71cb062a2c2ff, type: 3}
-  - {fileID: -1863263337750014623, guid: 81c62f122f0182044af71cb062a2c2ff, type: 3}
 --- !u!1 &1959934421
 GameObject:
   m_ObjectHideFlags: 0
