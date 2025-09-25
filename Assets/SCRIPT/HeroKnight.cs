@@ -31,6 +31,9 @@ public class HeroKnight : MonoBehaviour
     private float coyoteTimeCounter;
     private float jumpBufferCounter;
 
+    // ✅ Thêm control lock
+    private bool canControl = true;
+
     void Start()
     {
         m_animator = GetComponent<Animator>();
@@ -40,6 +43,14 @@ public class HeroKnight : MonoBehaviour
 
     void Update()
     {
+        if (!canControl)
+        {
+            // disable toàn bộ input + dừng nhân vật
+            m_body2d.linearVelocity = Vector2.zero;
+            m_animator.SetInteger("AnimState", 0);
+            return;
+        }
+
         // Timers
         m_timeSinceAttack += Time.deltaTime;
         if (m_rolling) m_rollCurrentTime += Time.deltaTime;
@@ -160,6 +171,17 @@ public class HeroKnight : MonoBehaviour
     public void TriggerDeath()
     {
         if (m_animator != null) m_animator.SetTrigger("Death");
+    }
+
+    // ✅ Thêm SetControl để GameManager gọi
+    public void SetControl(bool state)
+    {
+        canControl = state;
+        if (!state)
+        {
+            m_body2d.linearVelocity = Vector2.zero;
+            m_animator.SetInteger("AnimState", 0);
+        }
     }
 
     // Animation Events

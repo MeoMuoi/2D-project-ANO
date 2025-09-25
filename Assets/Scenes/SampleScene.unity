@@ -244,6 +244,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 54225479}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &460882945 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1038168246061390451, guid: 8b8c8cc6774fb074cb9139cc631b108e, type: 3}
+  m_PrefabInstance: {fileID: 1371671239}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1700,13 +1705,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f5034bc83802944c9bca57c55e08978, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerLife
-  m_speed: 4
-  m_jumpForce: 7.5
+  m_speed: 8
+  m_jumpForce: 8.5
   m_rollForce: 6
-  m_slideDust: {fileID: 0}
+  m_slideDust: {fileID: 460882945}
   fallMultiplier: 2.5
   lowJumpMultiplier: 2
-  coyoteTime: 0.2
+  coyoteTime: 0.3
   jumpBufferTime: 0.2
 --- !u!114 &1005253680
 MonoBehaviour:
@@ -1722,6 +1727,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   maxHealth: 5
   maxLives: 3
+  respawnPoint: {fileID: 677304420}
 --- !u!1 &1059901812
 GameObject:
   m_ObjectHideFlags: 0
@@ -2047,8 +2053,8 @@ Transform:
   m_GameObject: {fileID: 1092367551}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -178.8, y: 140, z: -2502}
-  m_LocalScale: {x: 27.8, y: 27.8, z: 27.8}
+  m_LocalPosition: {x: -116, y: 53, z: -2502}
+  m_LocalScale: {x: 20, y: 20, z: 20}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1595703757}
@@ -2353,6 +2359,63 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07f607f7527d73949a9c562fdfcd93a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AutoSetupGround
+--- !u!1001 &1371671239
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1038168246061390451, guid: 8b8c8cc6774fb074cb9139cc631b108e, type: 3}
+      propertyPath: m_Name
+      value: SlideDust
+      objectReference: {fileID: 0}
+    - target: {fileID: 5307321229598810032, guid: 8b8c8cc6774fb074cb9139cc631b108e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 34.49031
+      objectReference: {fileID: 0}
+    - target: {fileID: 5307321229598810032, guid: 8b8c8cc6774fb074cb9139cc631b108e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 44.12555
+      objectReference: {fileID: 0}
+    - target: {fileID: 5307321229598810032, guid: 8b8c8cc6774fb074cb9139cc631b108e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5307321229598810032, guid: 8b8c8cc6774fb074cb9139cc631b108e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5307321229598810032, guid: 8b8c8cc6774fb074cb9139cc631b108e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5307321229598810032, guid: 8b8c8cc6774fb074cb9139cc631b108e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5307321229598810032, guid: 8b8c8cc6774fb074cb9139cc631b108e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5307321229598810032, guid: 8b8c8cc6774fb074cb9139cc631b108e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5307321229598810032, guid: 8b8c8cc6774fb074cb9139cc631b108e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5307321229598810032, guid: 8b8c8cc6774fb074cb9139cc631b108e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8b8c8cc6774fb074cb9139cc631b108e, type: 3}
 --- !u!1 &1595703756
 GameObject:
   m_ObjectHideFlags: 0
@@ -2880,7 +2943,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UILives
   livesImage: {fileID: 1921921074}
-  livesSprites:
+  lifeSprites:
   - {fileID: 3809099528977689272, guid: 81c62f122f0182044af71cb062a2c2ff, type: 3}
   - {fileID: -6735226438528649199, guid: 81c62f122f0182044af71cb062a2c2ff, type: 3}
   - {fileID: 8049217189306615413, guid: 81c62f122f0182044af71cb062a2c2ff, type: 3}
@@ -3151,3 +3214,4 @@ SceneRoots:
   - {fileID: 2140887005}
   - {fileID: 1748211510}
   - {fileID: 54225479}
+  - {fileID: 1371671239}

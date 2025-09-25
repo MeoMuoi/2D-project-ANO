@@ -1,12 +1,18 @@
 using UnityEngine;
+using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
     [Header("Player Stats")]
-    public int maxHealth = 5;   // số mức máu (match số sprite trong UIHealthBar)
-    public int maxLives = 3;    // số mạng (match số sprite trong UILives)
+    public int maxHealth = 5;   // 5 vạch máu
+    public int maxLives = 3;    // 3 mạng
+
+    [Header("Respawn Settings")]
+    [Tooltip("Kéo thả một Empty Object làm vị trí respawn cho Player")]
+    public Transform respawnPoint;
+    public float respawnDelay = 2f; // thời gian chờ sau khi chết
 
     private int currentHealth;
     private int currentLives;
@@ -17,7 +23,6 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-        // Singleton
         if (Instance == null)
         {
             Instance = this;
@@ -38,9 +43,16 @@ public class GameManager : MonoBehaviour
         currentHealth = maxHealth;
         currentLives = maxLives;
 
-        // Khởi tạo UI
         if (uiHealthBar != null) uiHealthBar.SetHealth(currentHealth, maxHealth);
         if (uiLives != null) uiLives.SetLives(currentLives, maxLives);
+    }
+
+    void Update()
+    {
+        // Test phím (chỉ để debug)
+        if (Input.GetKeyDown(KeyCode.H)) TakeDamage(1);  // mất 1 máu
+        if (Input.GetKeyDown(KeyCode.J)) Heal(1);        // hồi 1 máu
+        if (Input.GetKeyDown(KeyCode.L)) AddLife(1);     // +1 mạng
     }
 
     // =========================
@@ -57,6 +69,10 @@ public class GameManager : MonoBehaviour
         {
             PlayerDied();
         }
+        else
+        {
+            if (player != null) player.TriggerHurt();
+        }
     }
 
     public void Heal(int amount)
@@ -68,25 +84,46 @@ public class GameManager : MonoBehaviour
     }
 
     // =========================
-    // Lives
+    // Lives & Respawn
     // =========================
     private void PlayerDied()
     {
         currentLives--;
         if (uiLives != null) uiLives.SetLives(currentLives, maxLives);
 
+        if (player != null)
+        {
+            player.TriggerDeath();
+            player.SetControl(false); // disable điều khiển khi chết
+        }
+
         if (currentLives > 0)
         {
-            // Respawn
-            currentHealth = maxHealth;
-            if (uiHealthBar != null) uiHealthBar.SetHealth(currentHealth, maxHealth);
-            if (player != null) player.transform.position = Vector3.zero; // hoặc respawnPoint
+            StartCoroutine(RespawnCoroutine());
         }
         else
         {
             Debug.Log("Game Over!");
-            // TODO: load màn hình Game Over
+            // TODO: load màn hình Game Over scene nếu muốn
         }
+    }
+
+    private IEnumerator RespawnCoroutine()
+    {
+        yield return new WaitForSeconds(respawnDelay);
+
+        // Respawn
+        currentHealth = maxHealth;
+        if (uiHealthBar != null) uiHealthBar.SetHealth(currentHealth, maxHealth);
+
+        if (respawnPoint != null && player != null)
+        {
+            player.transform.position = respawnPoint.position;
+        }
+
+        if (player != null) player.SetControl(true); // bật lại điều khiển
+
+        Debug.Log("Respawn player, lives left: " + currentLives);
     }
 
     public void AddLife(int amount)

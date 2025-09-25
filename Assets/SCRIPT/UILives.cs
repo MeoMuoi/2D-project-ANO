@@ -3,14 +3,27 @@ using UnityEngine.UI;
 
 public class UILives : MonoBehaviour
 {
-    public Image livesImage;        // chỗ hiển thị sprite
-    public Sprite[] livesSprites;   // sprite cho 0 mạng, 1 mạng, 2 mạng, 3 mạng...
+    public Image livesImage;
+    public Sprite[] lifeSprites; // sprite mạng
 
-    public void SetLives(int current, int max)
+    private int maxLives;
+
+    public void SetMaxLives(int max)
     {
-        if (livesSprites.Length == 0 || livesImage == null) return;
+        maxLives = max;
+    }
 
-        int index = Mathf.Clamp(current, 0, livesSprites.Length - 1);
-        livesImage.sprite = livesSprites[index];
+    public void SetLives(int current, int max) // overload 2 tham số
+    {
+        maxLives = max;
+        SetLives(current);
+    }
+
+    public void SetLives(int current) // 1 tham số
+    {
+        if (lifeSprites.Length == 0 || livesImage == null) return;
+
+        int index = Mathf.Clamp(current, 0, lifeSprites.Length - 1);
+        livesImage.sprite = lifeSprites[index];
     }
 }
