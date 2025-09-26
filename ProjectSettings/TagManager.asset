@@ -6,7 +6,7 @@ TagManager:
   tags:
   - Ground
   - HealthPickup
-  - NPCs
+  - NPC
   layers:
   - Default
   - TransparentFX

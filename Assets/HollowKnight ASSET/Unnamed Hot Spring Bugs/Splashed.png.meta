@@ -169,10 +169,10 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 277
-        width: 178
+        width: 370
         height: 272
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -186,37 +186,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Splashed_1
-      rect:
-        serializedVersion: 2
-        x: 174
-        y: 277
-        width: 193
-        height: 213
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c8f22dbbf41f57e10800000000000000
-      internalID: 2194925718168809356
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Splashed_2
       rect:
         serializedVersion: 2
         x: 373
         y: 277
-        width: 178
+        width: 370
         height: 275
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -230,37 +208,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Splashed_3
-      rect:
-        serializedVersion: 2
-        x: 549
-        y: 277
-        width: 193
-        height: 213
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 84951554fe70de5a0800000000000000
-      internalID: -6490522763729479352
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Splashed_4
       rect:
         serializedVersion: 2
         x: 748
         y: 277
-        width: 190
+        width: 370
         height: 258
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -274,37 +230,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Splashed_5
-      rect:
-        serializedVersion: 2
-        x: 925
-        y: 277
-        width: 193
-        height: 217
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1912f77bc40d16d60800000000000000
-      internalID: 7881809850789732753
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Splashed_6
       rect:
         serializedVersion: 2
         x: 1123
         y: 277
-        width: 193
+        width: 370
         height: 244
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -318,37 +252,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Splashed_7
-      rect:
-        serializedVersion: 2
-        x: 1303
-        y: 277
-        width: 193
-        height: 199
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 830b339760476e820800000000000000
-      internalID: 2947170577312624696
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Splashed_8
       rect:
         serializedVersion: 2
         x: 1498
-        y: 277
-        width: 193
+        y: 278
+        width: 370
         height: 244
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -362,37 +274,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Splashed_9
-      rect:
-        serializedVersion: 2
-        x: 1680
-        y: 277
-        width: 191
-        height: 193
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4ee049afa21f6aa70800000000000000
-      internalID: 8838016485656104676
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Splashed_10
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 191
+        width: 370
         height: 243
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -406,37 +296,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Splashed_11
-      rect:
-        serializedVersion: 2
-        x: 178
-        y: 0
-        width: 193
-        height: 198
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3470f5609e3c69eb0800000000000000
-      internalID: -4713364554394958013
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Splashed_12
       rect:
         serializedVersion: 2
         x: 373
         y: 0
-        width: 190
+        width: 370
         height: 257
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -450,37 +318,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Splashed_13
-      rect:
-        serializedVersion: 2
-        x: 550
-        y: 0
-        width: 193
-        height: 216
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d6ea3dc5b3abf2ad0800000000000000
-      internalID: -2724754485412647315
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Splashed_14
       rect:
         serializedVersion: 2
-        x: 748
+        x: 747
         y: 0
-        width: 178
+        width: 370
         height: 275
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -494,37 +340,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Splashed_15
-      rect:
-        serializedVersion: 2
-        x: 924
-        y: 0
-        width: 193
-        height: 212
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bdbdaed4572e92860800000000000000
-      internalID: 7505779247435930587
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Splashed_16
       rect:
         serializedVersion: 2
         x: 1123
         y: 0
-        width: 180
+        width: 370
         height: 271
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -537,33 +361,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Splashed_17
-      rect:
-        serializedVersion: 2
-        x: 1299
-        y: 0
-        width: 193
-        height: 212
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 37f85ed210122c960800000000000000
-      internalID: 7620689808413003635
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: edf4596da876ba546a9bd54d684ffb57
     internalID: 0
     vertices: []
     indices: 

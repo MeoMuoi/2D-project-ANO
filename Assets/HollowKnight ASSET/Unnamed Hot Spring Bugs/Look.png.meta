@@ -133,10 +133,10 @@ TextureImporter:
         serializedVersion: 2
         x: 29
         y: 13
-        width: 182
-        height: 269
+        width: 370
+        height: 270
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -150,37 +150,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Look_1
-      rect:
-        serializedVersion: 2
-        x: 207
-        y: 13
-        width: 191
-        height: 213
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f3d3c12ae3d409280800000000000000
-      internalID: -9038639520729514689
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Look_2
       rect:
         serializedVersion: 2
         x: 400
         y: 13
-        width: 180
-        height: 272
+        width: 370
+        height: 270
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -194,37 +172,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Look_3
-      rect:
-        serializedVersion: 2
-        x: 580
-        y: 13
-        width: 190
-        height: 213
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 34148465bb8c0d550800000000000000
-      internalID: 6183662995311706435
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Look_4
       rect:
         serializedVersion: 2
         x: 773
         y: 13
-        width: 178
-        height: 274
+        width: 370
+        height: 270
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -237,33 +193,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Look_5
-      rect:
-        serializedVersion: 2
-        x: 953
-        y: 13
-        width: 189
-        height: 210
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a0374c16f606f5460800000000000000
-      internalID: 7232605558078206730
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 918b5d9bfff7c3b40ac205ef8219b416
     internalID: 0
     vertices: []
     indices: 
