@@ -6,20 +6,19 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     [Header("Player Stats")]
-    public int maxHealth = 5;   // 5 vạch máu
-    public int maxLives = 3;    // 3 mạng
+    public int maxHealth = 5;   
+    public int maxLives = 3;    
 
     [Header("Respawn Settings")]
-    [Tooltip("Kéo thả một Empty Object làm vị trí respawn cho Player")]
     public Transform respawnPoint;
-    public float respawnDelay = 2f; // thời gian chờ sau khi chết
+    public float respawnDelay = 2f;
 
     private int currentHealth;
     private int currentLives;
 
     private UIHealthBar uiHealthBar;
     private UILives uiLives;
-    private HeroKnight player;
+    private MainCharacter player;
 
     void Awake()
     {
@@ -36,9 +35,10 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        uiHealthBar = FindObjectOfType<UIHealthBar>();
-        uiLives = FindObjectOfType<UILives>();
-        player = FindObjectOfType<HeroKnight>();
+        // Unity 2022 trở lên: dùng FindFirstObjectByType thay vì FindObjectOfType (bị warning)
+        uiHealthBar = FindFirstObjectByType<UIHealthBar>();
+        uiLives = FindFirstObjectByType<UILives>();
+        player = FindFirstObjectByType<MainCharacter>();
 
         currentHealth = maxHealth;
         currentLives = maxLives;
@@ -49,17 +49,20 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        // Test phím (chỉ để debug)
-        if (Input.GetKeyDown(KeyCode.H)) TakeDamage(1);  // mất 1 máu
-        if (Input.GetKeyDown(KeyCode.J)) Heal(1);        // hồi 1 máu
-        if (Input.GetKeyDown(KeyCode.L)) AddLife(1);     // +1 mạng
+        if (Input.GetKeyDown(KeyCode.H)) TakeDamage(1);
+        if (Input.GetKeyDown(KeyCode.J)) Heal(1);
+        if (Input.GetKeyDown(KeyCode.L)) AddLife(1);
     }
 
-    // =========================
-    // Health
-    // =========================
+    // ========================= HEALTH =========================
     public void TakeDamage(int damage)
     {
+        if (player == null) return;
+
+        // ❌ KHÔNG được gọi nếu Player đang lăn hoặc có I-frames
+        if (player.IsInvincible)
+            return;
+
         currentHealth -= damage;
         if (currentHealth < 0) currentHealth = 0;
 
@@ -71,7 +74,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            if (player != null) player.TriggerHurt();
+            player.TriggerHurt();
         }
     }
 
@@ -83,9 +86,7 @@ public class GameManager : MonoBehaviour
         if (uiHealthBar != null) uiHealthBar.SetHealth(currentHealth, maxHealth);
     }
 
-    // =========================
-    // Lives & Respawn
-    // =========================
+    // ========================= LIVES =========================
     private void PlayerDied()
     {
         currentLives--;
@@ -93,37 +94,49 @@ public class GameManager : MonoBehaviour
 
         if (player != null)
         {
-            player.TriggerDeath();
-            player.SetControl(false); // disable điều khiển khi chết
+            player.SetControl(false);
+            StartCoroutine(HandleDeathAndRespawnQuick());
         }
 
-        if (currentLives > 0)
+        if (currentLives <= 0)
         {
-            StartCoroutine(RespawnCoroutine());
-        }
-        else
-        {
-            Debug.Log("Game Over!");
-            // TODO: load màn hình Game Over scene nếu muốn
+            Debug.Log("GAME OVER");
         }
     }
 
-    private IEnumerator RespawnCoroutine()
+    // ========================= DEATH + RESPAWN =========================
+    private IEnumerator HandleDeathAndRespawnQuick()
     {
-        yield return new WaitForSeconds(respawnDelay);
+        if (player == null) yield break;
 
-        // Respawn
+        Animator animator = player.GetComponent<Animator>();
+        if (animator == null) yield break;
+
+        animator.ResetTrigger("Hurt");
+        animator.CrossFade("Death", 0f);
+
+        yield return null;
+
+        while (!animator.GetCurrentAnimatorStateInfo(0).IsName("Death"))
+            yield return null;
+
+        float deathDuration = animator.GetCurrentAnimatorStateInfo(0).length;
+        yield return new WaitForSeconds(deathDuration);
+
+        // Reset máu
         currentHealth = maxHealth;
         if (uiHealthBar != null) uiHealthBar.SetHealth(currentHealth, maxHealth);
 
-        if (respawnPoint != null && player != null)
-        {
+        // Respawn
+        if (respawnPoint != null)
             player.transform.position = respawnPoint.position;
-        }
+        else
+            Debug.LogWarning("RespawnPoint is NOT assigned!");
 
-        if (player != null) player.SetControl(true); // bật lại điều khiển
+        animator.CrossFade("Idle", 0f);
+        player.SetControl(true);
 
-        Debug.Log("Respawn player, lives left: " + currentLives);
+        Debug.Log("Respawn thành công! Lives còn: " + currentLives);
     }
 
     public void AddLife(int amount)

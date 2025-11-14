@@ -4,75 +4,91 @@ using UnityEngine;
 using UnityEditor;
 #endif
 
+// Script này chỉ có ý nghĩa sử dụng trong Unity Editor để setup scene
 public class AutoSetupGround : MonoBehaviour
 {
+    // Hàm Reset() được gọi khi component được thêm vào hoặc khi nhấn nút Reset trong Inspector
     void Reset()
     {
-        // --- Thêm BoxCollider2D nếu chưa có ---
+        // --- 1. Thêm BoxCollider2D nếu chưa có ---
         if (GetComponent<BoxCollider2D>() == null)
         {
             gameObject.AddComponent<BoxCollider2D>();
+            Debug.Log("BoxCollider2D đã được thêm vào: " + gameObject.name);
         }
 
-        // --- Gán Tag "Ground" ---
-        if (!IsTagExists("Ground"))
-        {
+        // --- 2. Xử lý Tag "Ground" ---
 #if UNITY_EDITOR
-            // Nếu chưa có thì tạo mới Tag
-            SerializedObject tagManager = new SerializedObject(
-                AssetDatabase.LoadAllAssetsAtPath("ProjectSettings/TagManager.asset")[0]
-            );
-            SerializedProperty tagsProp = tagManager.FindProperty("tags");
-
-            // Thêm "Ground" vào list Tag
-            bool found = false;
-            for (int i = 0; i < tagsProp.arraySize; i++)
-            {
-                SerializedProperty t = tagsProp.GetArrayElementAtIndex(i);
-                if (t.stringValue.Equals("Ground")) { found = true; break; }
-            }
-            if (!found)
-            {
-                tagsProp.InsertArrayElementAtIndex(0);
-                tagsProp.GetArrayElementAtIndex(0).stringValue = "Ground";
-                tagManager.ApplyModifiedProperties();
-            }
+        // Tự động thêm Tag "Ground" nếu chưa tồn tại
+        EnsureTagExists("Ground");
 #endif
-        }
         gameObject.tag = "Ground";
 
-        // --- Gán Layer "Ground" ---
+        // --- 3. Xử lý Layer "Ground" ---
         int groundLayer = LayerMask.NameToLayer("Ground");
         if (groundLayer == -1)
         {
 #if UNITY_EDITOR
-            SerializedObject tagManager = new SerializedObject(
-                AssetDatabase.LoadAllAssetsAtPath("ProjectSettings/TagManager.asset")[0]
-            );
-            SerializedProperty layersProp = tagManager.FindProperty("layers");
-
-            for (int i = 8; i < layersProp.arraySize; i++) // layer custom từ 8 trở đi
-            {
-                SerializedProperty sp = layersProp.GetArrayElementAtIndex(i);
-                if (string.IsNullOrEmpty(sp.stringValue))
-                {
-                    sp.stringValue = "Ground";
-                    tagManager.ApplyModifiedProperties();
-                    break;
-                }
-            }
+            // Tự động thêm Layer "Ground" nếu chưa tồn tại
+            groundLayer = EnsureLayerExists("Ground");
 #endif
-            groundLayer = LayerMask.NameToLayer("Ground");
         }
-        gameObject.layer = groundLayer;
+        
+        // Gán Layer cho GameObject
+        if (groundLayer != -1)
+        {
+            gameObject.layer = groundLayer;
+        }
 
-        Debug.Log("✅ Auto setup Ground thành công cho " + gameObject.name);
+        Debug.Log("✅ Auto setup Ground thành công cho " + gameObject.name + " (Layer: Ground, Tag: Ground)");
     }
 
-    // Check tag có tồn tại không
-    private bool IsTagExists(string tag)
+#if UNITY_EDITOR
+    // Hàm hỗ trợ đảm bảo một Tag tồn tại
+    private void EnsureTagExists(string tagName)
     {
-        try { var obj = new GameObject(); obj.tag = tag; DestroyImmediate(obj); return true; }
-        catch { return false; }
+        SerializedObject tagManager = new SerializedObject(
+            AssetDatabase.LoadAllAssetsAtPath("ProjectSettings/TagManager.asset")[0]
+        );
+        SerializedProperty tagsProp = tagManager.FindProperty("tags");
+
+        bool found = false;
+        for (int i = 0; i < tagsProp.arraySize; i++)
+        {
+            SerializedProperty t = tagsProp.GetArrayElementAtIndex(i);
+            if (t.stringValue.Equals(tagName)) { found = true; break; }
+        }
+
+        if (!found)
+        {
+            // Thêm Tag vào vị trí đầu tiên còn trống
+            tagsProp.InsertArrayElementAtIndex(tagsProp.arraySize);
+            tagsProp.GetArrayElementAtIndex(tagsProp.arraySize - 1).stringValue = tagName;
+            tagManager.ApplyModifiedProperties();
+            Debug.Log($"Tag '{tagName}' đã được tạo.");
+        }
     }
+
+    // Hàm hỗ trợ đảm bảo một Layer tồn tại và trả về index của Layer đó
+    private int EnsureLayerExists(string layerName)
+    {
+        SerializedObject tagManager = new SerializedObject(
+            AssetDatabase.LoadAllAssetsAtPath("ProjectSettings/TagManager.asset")[0]
+        );
+        SerializedProperty layersProp = tagManager.FindProperty("layers");
+        
+        for (int i = 8; i < layersProp.arraySize; i++) // Layer tùy chỉnh bắt đầu từ index 8
+        {
+            SerializedProperty sp = layersProp.GetArrayElementAtIndex(i);
+            if (string.IsNullOrEmpty(sp.stringValue))
+            {
+                sp.stringValue = layerName;
+                tagManager.ApplyModifiedProperties();
+                Debug.Log($"Layer '{layerName}' đã được tạo.");
+                return i;
+            }
+        }
+        return -1; // Không tìm thấy chỗ trống để tạo Layer mới
+    }
+#endif
 }

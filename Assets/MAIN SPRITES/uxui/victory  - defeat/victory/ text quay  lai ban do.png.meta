@@ -1,0 +1,520 @@
+fileFormatVersion: 2
+guid: 892b12e767f3ccf40b0ac95207021c25
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8366288879661318622
+    second: ' text quay  lai ban do_0'
+  - first:
+      213: -2973065205843793607
+    second: ' text quay  lai ban do_1'
+  - first:
+      213: -4319539846576769500
+    second: ' text quay  lai ban do_2'
+  - first:
+      213: -1150900898234971626
+    second: ' text quay  lai ban do_3'
+  - first:
+      213: 1968680657788773737
+    second: ' text quay  lai ban do_4'
+  - first:
+      213: 7757544729810682896
+    second: ' text quay  lai ban do_5'
+  - first:
+      213: 8553414519584008206
+    second: ' text quay  lai ban do_6'
+  - first:
+      213: 6676869929841834732
+    second: ' text quay  lai ban do_7'
+  - first:
+      213: 962697600288749932
+    second: ' text quay  lai ban do_8'
+  - first:
+      213: -7312316355639549687
+    second: ' text quay  lai ban do_9'
+  - first:
+      213: 8411815819538538490
+    second: ' text quay  lai ban do_10'
+  - first:
+      213: 6548473630066510798
+    second: ' text quay  lai ban do_11'
+  - first:
+      213: 6788025090438473207
+    second: ' text quay  lai ban do_12'
+  - first:
+      213: -2313933425533600982
+    second: ' text quay  lai ban do_13'
+  - first:
+      213: 2457922536019973075
+    second: ' text quay  lai ban do_14'
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ' text quay  lai ban do_0'
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 326
+        width: 27
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22e7c772798f4eb80800000000000000
+      internalID: -8366288879661318622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ' text quay  lai ban do_1'
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 331
+        width: 25
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9396b9f72fc8db6d0800000000000000
+      internalID: -2973065205843793607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ' text quay  lai ban do_2'
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 331
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42675ab3569ed04c0800000000000000
+      internalID: -4319539846576769500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ' text quay  lai ban do_3'
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 325
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61ac6051bbd2700f0800000000000000
+      internalID: -1150900898234971626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ' text quay  lai ban do_4'
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 331
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 965aea3b0a8225b10800000000000000
+      internalID: 1968680657788773737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ' text quay  lai ban do_5'
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 324
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 014c19d94d558ab60800000000000000
+      internalID: 7757544729810682896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ' text quay  lai ban do_6'
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 331
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0829780035d3b670800000000000000
+      internalID: 8553414519584008206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ' text quay  lai ban do_7'
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 353
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ceab5bb53d109ac50800000000000000
+      internalID: 6676869929841834732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ' text quay  lai ban do_8'
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 331
+        width: 25
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c69f45bed503c5d00800000000000000
+      internalID: 962697600288749932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ' text quay  lai ban do_9'
+      rect:
+        serializedVersion: 2
+        x: 997
+        y: 331
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90163d0540f658a90800000000000000
+      internalID: -7312316355639549687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ' text quay  lai ban do_10'
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 354
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aff1b9f8be5ccb470800000000000000
+      internalID: 8411815819538538490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ' text quay  lai ban do_11'
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 331
+        width: 27
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecb802d321ad0ea50800000000000000
+      internalID: 6548473630066510798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ' text quay  lai ban do_12'
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 331
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f52602fad8e33e50800000000000000
+      internalID: 6788025090438473207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ' text quay  lai ban do_13'
+      rect:
+        serializedVersion: 2
+        x: 1097
+        y: 331
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2bba292fc143efd0800000000000000
+      internalID: -2313933425533600982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ' text quay  lai ban do_14'
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 354
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d3d5ec168b4c1220800000000000000
+      internalID: 2457922536019973075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ' text quay  lai ban do_0': -8366288879661318622
+      ' text quay  lai ban do_1': -2973065205843793607
+      ' text quay  lai ban do_10': 8411815819538538490
+      ' text quay  lai ban do_11': 6548473630066510798
+      ' text quay  lai ban do_12': 6788025090438473207
+      ' text quay  lai ban do_13': -2313933425533600982
+      ' text quay  lai ban do_14': 2457922536019973075
+      ' text quay  lai ban do_2': -4319539846576769500
+      ' text quay  lai ban do_3': -1150900898234971626
+      ' text quay  lai ban do_4': 1968680657788773737
+      ' text quay  lai ban do_5': 7757544729810682896
+      ' text quay  lai ban do_6': 8553414519584008206
+      ' text quay  lai ban do_7': 6676869929841834732
+      ' text quay  lai ban do_8': 962697600288749932
+      ' text quay  lai ban do_9': -7312316355639549687
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
